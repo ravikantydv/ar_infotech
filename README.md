@@ -1,4 +1,4 @@
-# TrustBite Infotech Website
+# AR Infotech Website
 
 A deployment-friendly company website built with Flask.
 
