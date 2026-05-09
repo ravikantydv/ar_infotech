@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Sign Up | AR Infotech{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container form-container">
+        <h1 class="section-title">Create Account</h1>
+        <form method="POST" class="contact-form">
+            <div class="form-row">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-row">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block title %}Admin Dashboard | AR Infotech{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container">
+        <h1 class="section-title">Admin Dashboard</h1>
+
+        <h2>Registered Users</h2>
+        <div class="card" style="overflow-x:auto; margin-bottom:30px;">
+            <table style="width:100%; border-collapse: collapse;">
+                <tr>
+                    <th>ID</th><th>Name</th><th>Email</th><th>Admin</th><th>Created At</th>
+                </tr>
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.is_admin }}</td>
+                    <td>{{ user.created_at }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+        <h2>Contact Messages</h2>
+        <div class="card" style="overflow-x:auto; margin-bottom:30px;">
+            <table style="width:100%; border-collapse: collapse;">
+                <tr>
+                    <th>ID</th><th>Name</th><th>Email</th><th>Business</th><th>Service</th><th>Message</th><th>Time</th>
+                </tr>
+                {% for c in contacts %}
+                <tr>
+                    <td>{{ c.id }}</td>
+                    <td>{{ c.name }}</td>
+                    <td>{{ c.email }}</td>
+                    <td>{{ c.business }}</td>
+                    <td>{{ c.service }}</td>
+                    <td>{{ c.message }}</td>
+                    <td>{{ c.created_at }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+        <h2>Login History</h2>
+        <div class="card" style="overflow-x:auto; margin-bottom:30px;">
+            <table style="width:100%; border-collapse: collapse;">
+                <tr>
+                    <th>ID</th><th>Name</th><th>Email</th><th>Login Time</th><th>IP</th>
+                </tr>
+                {% for l in logins %}
+                <tr>
+                    <td>{{ l.id }}</td>
+                    <td>{{ l.name }}</td>
+                    <td>{{ l.email }}</td>
+                    <td>{{ l.login_time }}</td>
+                    <td>{{ l.ip_address }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+        <h2>Visited Pages</h2>
+        <div class="card" style="overflow-x:auto;">
+            <table style="width:100%; border-collapse: collapse;">
+                <tr>
+                    <th>ID</th><th>Name</th><th>Email</th><th>URL</th><th>Endpoint</th><th>Method</th><th>Visited At</th>
+                </tr>
+                {% for v in visits %}
+                <tr>
+                    <td>{{ v.id }}</td>
+                    <td>{{ v.name if v.name else 'Guest' }}</td>
+                    <td>{{ v.email if v.email else '-' }}</td>
+                    <td>{{ v.page_url }}</td>
+                    <td>{{ v.endpoint }}</td>
+                    <td>{{ v.method }}</td>
+                    <td>{{ v.visited_at }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</section>
+{% endblock %}

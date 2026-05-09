@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard | AR Infotech{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container text-center">
+        <h1>Welcome, {{ session.get('user_name') }}</h1>
+        <p>You are logged in successfully.</p>
+        <p>Explore our services, portfolio, and contact us for your project requirements.</p>
+
+        <div style="margin-top: 20px;">
+            <a href="{{ url_for('services') }}" class="btn btn-primary">Our Services</a>
+            <a href="{{ url_for('portfolio') }}" class="btn btn-secondary">Portfolio</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

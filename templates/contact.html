@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}Contact | AR Infotech{% endblock %}
+
+{% block content %}
+<section class="page-banner">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>Tell us about your business and what you need.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container form-container">
+        <form method="POST" class="contact-form">
+            <div class="form-row">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-row">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone">
+            </div>
+            <div class="form-row">
+                <label for="business">Business Name</label>
+                <input type="text" id="business" name="business">
+            </div>
+            <div class="form-row">
+                <label for="service">Service Needed</label>
+                <select id="service" name="service">
+                    <option value="">Select a service</option>
+                    <option>Website Development</option>
+                    <option>Web Application</option>
+                    <option>Android App</option>
+                    <option>AI Solution</option>
+                    <option>Maintenance</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="message">Project Requirement</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

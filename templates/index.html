@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block title %}Home | AR Infotech{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container hero-grid">
+        <div>
+            <h1>We Build Websites, Apps, and AI Solutions for Modern Businesses</h1>
+            <p>
+                AR Infotech helps startups and growing businesses establish a strong digital presence
+                with high-quality websites, business apps, and automation solutions.
+            </p>
+            <div class="hero-actions">
+                <a href="{{ url_for('contact') }}" class="btn btn-primary">Get a Free Consultation</a>
+                <a href="{{ url_for('services') }}" class="btn btn-secondary">Explore Services</a>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <h3>Why clients choose us</h3>
+            <ul>
+                <li>Business-focused website design</li>
+                <li>Custom Android and web app development</li>
+                <li>AI and automation integration</li>
+                <li>Affordable solutions for SMEs</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Our Core Services</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Business Websites</h3>
+                <p>Professional websites for companies, shops, agencies, and service providers.</p>
+            </div>
+            <div class="card">
+                <h3>Web Applications</h3>
+                <p>Custom portals, dashboards, booking systems, and internal tools.</p>
+            </div>
+            <div class="card">
+                <h3>Mobile Apps</h3>
+                <p>Android applications for customer engagement, operations, and business workflows.</p>
+            </div>
+            <div class="card">
+                <h3>AI Automation</h3>
+                <p>Smart automation, chatbots, analytics, and AI-powered business solutions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section alt-bg">
+    <div class="container">
+        <h2 class="section-title">Who We Work With</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Retail Businesses</h3>
+                <p>Online presence, inventory systems, and lead capture.</p>
+            </div>
+            <div class="card">
+                <h3>Healthcare Clinics</h3>
+                <p>Appointment systems, patient communication, and service websites.</p>
+            </div>
+            <div class="card">
+                <h3>Coaching Institutes</h3>
+                <p>Course websites, admin systems, and student portals.</p>
+            </div>
+            <div class="card">
+                <h3>Startups</h3>
+                <p>MVPs, landing pages, and rapid product development.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

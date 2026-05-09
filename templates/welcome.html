@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Welcome | AR Infotech{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container text-center">
+        <h1>Welcome to AR Infotech</h1>
+        <p>Your account has been created successfully.</p>
+        <p>We build websites, mobile apps, business solutions, and AI-powered systems for growing businesses.</p>
+        <div style="margin-top: 20px;">
+            <a href="{{ url_for('login') }}" class="btn btn-primary">Login Now</a>
+            <a href="{{ url_for('services') }}" class="btn btn-secondary">Explore Services</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
